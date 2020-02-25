@@ -1,66 +1,99 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>The HTML5 Herald</title>
   <style>
-   .cc-grid {
-		display: grid;
-		grid-template-columns: 33.33% 33.33% 33.33%;
-		grid-gap: 15px;
-		margin: 20px 0px;
-		margin-bottom: 40px;
-	}
-	 
-	
-	
-	.cc-grid .cc-cell{
-		height: 180px;
-		border-radius: 4px;
-		position: relative;
-		box-shadow: 0 2px 5px #b3b3b3;
-		background: #f16322;
-		background-size: cover !important;
-    	background-repeat: no-repeat !important;
-		 
-	}
-	 
-	 
-	.cc-grid .cc-title {
-		color: white;
-		font-weight: 700;
-		font-size: 20px;
-		position: absolute;
-		bottom: 20px;
-		left: 20px;
-	}
-	
-	
-	
-	.cc-grid .cc-overlay {
-        background: linear-gradient(0deg, rgba(0,0,0,0.7749474789915967) 0%, rgba(255,255,255,0) 41%);		width: 100%;
-		height: 100%;
-		border-radius: 4px;
-	}
-	 
-	.cc-overlay:hover  {
-		background: linear-gradient(0deg, rgba(0,0,0,0.7749474789915967) 0%, rgba(130, 118, 118, 0.68) 41%);
-	}
-	
-	@media (max-width: 991.98px) {
-		  .cc-grid {
-			 grid-template-columns: 50% 50%;
-		 }
-	}
-	 
-	@media (max-width: 767.98px) {
-		  .cc-grid {
-			 grid-template-columns: 100%;
-		 }
-	}
-	 
+    .cc-grid {
+      display: grid;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+      grid-gap: 15px;
+      margin: 20px 0px;
+      margin-bottom: 40px;
+    }
 
+
+
+    .cc-grid .cc-cell {
+      height: 180px;
+      border-radius: 4px;
+      position: relative;
+      box-shadow: 0 2px 5px #b3b3b3;
+      background: #f16322;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+
+    }
+
+
+    .cc-grid .cc-title {
+      color: white;
+      font-weight: 700;
+      font-size: 20px;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+
+
+
+    .cc-grid .cc-overlay {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.7749474789915967) 0%, rgba(255, 255, 255, 0) 41%);
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+    }
+
+    .cc-cell.active .cc-overlay {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.7749474789915967) 0%, #0c243ed9 41%);
+    }
+
+    .cc-cell .cc-links {
+      display: none;
+      padding: 0 20%;
+      padding-top: 24px;
+    }
+
+    .cc-cell .cc-links a {
+      border: 2px solid #ffffff;
+      font-weight: bold;
+      border-radius: 20px;
+      font-size: 16px;
+      text-transform: none;
+      text-decoration: none;
+      display: block;
+      padding: 8px 12px;
+      text-align: center;
+      color: white;
+    }
+
+    .cc-cell .cc-links a:hover {
+      background-color: #f16322b8;
+    }
+
+    .cc-cell .cc-links a:first-child {
+      margin-bottom: 12px;
+    }
+
+    .cc-cell.active .cc-links{
+      display: block;
+    }
+
+    
+
+    @media (max-width: 991.98px) {
+      .cc-grid {
+        grid-template-columns: 50% 50%;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .cc-grid {
+        grid-template-columns: 100%;
+      }
+    }
   </style>
 </head>
 
@@ -68,72 +101,207 @@
   <div class="container" style="max-width: 1067px;">
 
     <div class="cc-grid">
-        <div class="cc-cell" href="https://climate.careers/jobs/?impact_areas=Food%20%26%20Agriculture" style="background: url('https://i.imgur.com/xxKmj8f.png')">
-          <div class="cc-overlay"></div>
-          <div class="cc-title">Food & Agriculture</div>
- 
-       </div>
-        <div class="cc-cell" href="https://climate.careers/jobs/?impact_areas=Energy" style="background: url('https://i.imgur.com/WYqUA9B.png')">
-          <div class="cc-overlay"></div>
-          <div class="cc-title">Energy</div>
- 
-       </div>
-       <div class="cc-cell" href="https://climate.careers/jobs/?impact_areas=Carbontech" style="background: url('https://i.imgur.com/5nLHSTV.png')">
-          <div class="cc-overlay"></div>
-          <div class="cc-title">Carbontech</div>
- 
-       </div>
-        <div class="cc-cell" href="https://climate.careers/jobs/?impact_areas=Ecosystems%20%26%20Biodiversity" style="background: url('https://i.imgur.com/OwkMUtC.png')">
-          <div class="cc-overlay"></div>
-          <div class="cc-title">Ecosystems & Biodiversity</div>
- 
-       </div>
-        <div class="cc-cell" href="https://climate.careers/jobs/?impact_areas=Capital" style="background: url('https://i.imgur.com/J88zBSn.png')">
-          <div class="cc-overlay"></div>
-          <div class="cc-title">Capital</div>
- 
-       </div>
-        <div class="cc-cell" href="https://climate.careers/jobs/?impact_areas=Transportation" style="background: url('https://i.imgur.com/18Bhh2V.png')">
-          <div class="cc-overlay"></div>
-          <div class="cc-title">Transportation</div>
- 
-       </div>
-        <div class="cc-cell" href="https://climate.careers/jobs/?impact_areas=Buildings%20%26%20Cities" style="background: url('https://i.imgur.com/IwaQCGo.png')">
-          <div class="cc-overlay"></div>
-          <div class="cc-title">Buildings & Cities</div>
- 
-       </div>
-        <div class="cc-cell" href="https://climate.careers/jobs/?impact_areas=Advocacy%20%26%20Activism" style="background: url('https://i.imgur.com/OIBkQyn.png')">
-          <div class="cc-overlay"></div>
-          <div class="cc-title">Advocacy & Activism</div>
- 
-       </div>
-       <div class="cc-cell" href="https://climate.careers/jobs/?impact_areas=Circular%20Economy%20%26%20Waste%20Reduction" style="background: url('https://i.imgur.com/8ga3sm5.png')">
-          <div class="cc-overlay"></div>
-          <div class="cc-title">Circular Economy & Waste</div>
- 
-       </div>
-       <div class="cc-cell" href="https://climate.careers/jobs/?impact_areas=Materials%20%26%20Manufacturing%20" style="background: url('https://i.imgur.com/oLLdowk.png')">
-          <div class="cc-overlay"></div>
-          <div class="cc-title">Materials & Manufacturing</div>
- 
-       </div>
-       <div class="cc-cell" href="https://climate.careers/jobs/?impact_areas=Education%20%26%20Research" style="background: url('https://i.imgur.com/IMsVLWH.png')">
-       <div class="cc-overlay"></div>
-       <div class="cc-title">Education & Research</div>
- 
-         </div>
-       <div class="cc-cell" href="https://climate.careers/jobs" style="">
-          <div class="cc-overlay"></div>
-          <div class="cc-title">Explore all Impact Areas</div>
- 
-       </div>
-      
- 
+      <div class="cc-cell" 
+        style="background: url('https://i.imgur.com/xxKmj8f.png')">
+        <div class="cc-overlay">
+          <div class="cc-links">
+            <a href="https://climate.careers/test?impactArea=Food%20%26%20Agriculture">
+              Employers
+            </a>
+            <a href="https://climate.careers/jobs/?impact_areas=Food%20%26%20Agriculture">
+              Jobs
+            </a>
+          </div>
+        </div>
+        <div class="cc-title">Food & Agriculture</div>
+
+      </div>
+      <div class="cc-cell" 
+        style="background: url('https://i.imgur.com/WYqUA9B.png')">
+        <div class="cc-overlay">
+          <div class="cc-links">
+            <a href="https://climate.careers/test?impactArea=Energy">
+              Employers
+            </a>
+            <a href="https://climate.careers/jobs/?impact_areas=Energy">
+              Jobs
+            </a>
+          </div>
+        </div>
+        <div class="cc-title">Energy</div>
+
+      </div>
+      <div class="cc-cell" 
+        style="background: url('https://i.imgur.com/5nLHSTV.png')">
+        <div class="cc-overlay">
+          <div class="cc-links">
+            <a href="https://climate.careers/test?impactArea=Carbontech">
+              Employers
+            </a>
+            <a href="https://climate.careers/jobs/?impact_areas=Carbontech">
+              Jobs
+            </a>
+          </div>
+        </div>
+        <div class="cc-title">Carbontech</div>
+
+      </div>
+      <div class="cc-cell"
+        style="background: url('https://i.imgur.com/OwkMUtC.png')">
+        <div class="cc-overlay">
+          <div class="cc-links">
+            <a href="https://climate.careers/test?impactArea=Ecosystems%20%26%20Biodiversity">
+              Employers
+            </a>
+            <a  href="https://climate.careers/jobs/?impact_areas=Ecosystems%20%26%20Biodiversity">
+              Jobs
+            </a>
+          </div>
+        </div>
+        <div class="cc-title">Ecosystems & Biodiversity</div>
+
+      </div>
+      <div class="cc-cell" 
+        style="background: url('https://i.imgur.com/J88zBSn.png')">
+        <div class="cc-overlay">
+          <div class="cc-links">
+            <a href="https://climate.careers/test?impactArea=Capital">
+              Employers
+            </a>
+            <a href="https://climate.careers/jobs/?impact_areas=Capital">
+              Jobs
+            </a>
+          </div>
+        </div>
+        <div class="cc-title">Capital</div>
+
+      </div>
+      <div class="cc-cell" 
+        style="background: url('https://i.imgur.com/18Bhh2V.png')">
+        <div class="cc-overlay">
+          <div class="cc-links">
+            <a href="https://climate.careers/test?impactArea=Transportation">
+              Employers
+            </a>
+            <a href="https://climate.careers/jobs/?impact_areas=Transportation">
+              Jobs
+            </a>
+          </div>
+        </div>
+        <div class="cc-title">Transportation</div>
+
+      </div>
+      <div class="cc-cell" 
+        style="background: url('https://i.imgur.com/IwaQCGo.png')">
+        <div class="cc-overlay">
+          <div class="cc-links">
+            <a href="https://climate.careers/test?impactArea=Buildings%20%26%20Cities">
+              Employers
+            </a>
+            <a href="https://climate.careers/jobs/?impact_areas=Buildings%20%26%20Cities">
+              Jobs
+            </a>
+          </div>
+        </div>
+        <div class="cc-title">Buildings & Cities</div>
+
+      </div>
+      <div class="cc-cell" 
+        style="background: url('https://i.imgur.com/OIBkQyn.png')">
+        <div class="cc-overlay">
+          <div class="cc-links">
+            <a href="https://climate.careers/test?impactArea=Advocacy%20%26%20Activism">
+              Employers
+            </a>
+            <a href="https://climate.careers/jobs/?impact_areas=Advocacy%20%26%20Activism">
+              Jobs
+            </a>
+          </div>
+        </div>
+        <div class="cc-title">Advocacy & Activism</div>
+
+      </div>
+      <div class="cc-cell"
+        
+        style="background: url('https://i.imgur.com/8ga3sm5.png')">
+        <div class="cc-overlay">
+          <div class="cc-links">
+            <a href="https://climate.careers/test?impactArea=Circular%20Economy%20%26%20Waste">
+              Employers
+            </a>
+            <a href="https://climate.careers/jobs/?impact_areas=Circular%20Economy%20%26%20Waste%20Reduction">
+              Jobs
+            </a>
+          </div>
+        </div>
+        <div class="cc-title">Circular Economy & Waste</div>
+
+      </div>
+      <div class="cc-cell" 
+        style="background: url('https://i.imgur.com/oLLdowk.png')">
+        <div class="cc-overlay">
+          <div class="cc-links">
+            <a href="https://climate.careers/test?impactArea=Materials%20%26%20Manufacturing">
+              Employers
+            </a>
+            <a href="https://climate.careers/jobs/?impact_areas=Materials%20%26%20Manufacturing%20">
+              Jobs
+            </a>
+          </div>
+        </div>
+        <div class="cc-title">Materials & Manufacturing</div>
+
+      </div>
+      <div class="cc-cell" 
+        style="background: url('https://i.imgur.com/IMsVLWH.png')">
+        <div class="cc-overlay">
+          <div class="cc-links">
+            <a href="https://climate.careers/test?impactArea=Research%20%26%20Education">
+              Employers
+            </a>
+            <a href="https://climate.careers/jobs/?impact_areas=Education%20%26%20Research">
+              Jobs
+            </a>
+          </div>
+        </div>
+        <div class="cc-title">Education & Research</div>
+      </div>
+      <div class="cc-cell" href="https://climate.careers/jobs">
+        <div class="cc-overlay">
+          <div class="cc-links">
+            <a href="https://climate.careers/test">
+              Employers
+            </a>
+            <a href="https://climate.careers/jobs">
+              Jobs
+            </a>
+          </div>
+        </div>
+        <div class="cc-title">Explore all Impact Areas</div>
+      </div>
     </div>
- </div>
- <script>
-   console.log('hi');
- </script>
+  </div>
+  <script>
+    (function () {
+      const $cells = document.querySelectorAll('.cc-cell');
+      function showOverlay(el) {
+        
+        $cells.forEach((cell)=> { cell.classList.remove('active'); });
+        el.classList.add('active');
+        console.log('hi', el);
+      }
+
+      $cells.forEach(function(el,idx) {
+        el.addEventListener('click', function() {
+          showOverlay(el);
+        });
+
+        el.addEventListener('mouseenter', function() {
+          showOverlay(el);
+        });
+      });
+    })();
+  </script>
 </body>
+
 </html>
